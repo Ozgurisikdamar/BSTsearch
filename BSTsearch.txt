@@ -1,0 +1,14 @@
+public static boolean search(int key, BSTNode current)
+{
+	if(current == null)
+		return false;
+	if(current.value == key)
+		return true;
+	else
+	{
+		if(key < current.value)
+			return search(key, current.leftChild);
+		else
+			return search(key, current.rightChild);
+	}					
+}
